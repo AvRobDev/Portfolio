@@ -1,0 +1,36 @@
+html {
+    background-color: #f2f9ff;
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80ch;
+    padding: 1rem;
+    line-height: 1.5;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+  .footer-text{
+    color: rgb(107, 107, 107);
+  }
+
+  .footer-link{
+    font-weight: bold;
+    color:blueviolet;
+  }
+
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }

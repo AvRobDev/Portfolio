@@ -1,5 +1,9 @@
 ---
 import { fade } from "astro:transitions";
+import '../styles/global.css'
+import '../styles/index.css'
+import Navigation from '../components/Navigation.astro'
+import Footer from "../components/Footer.astro";
 
 const pageTitle = "My initial Astro project";
 const identity = {
@@ -14,6 +18,7 @@ const skills = ["JavaScript", "React", "Astro", "NodeJS", "Django"]
 const happy = true;
 const finished = false;
 const goals = 3;
+
 ---
 
 <html lang="es">
@@ -25,23 +30,22 @@ const goals = 3;
     <title>Astro</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/post/post-1/">.md</a>
+    <Navigation />
     <ul>
       <h1>{pageTitle}</h1>
-      <p>Hi, my name is {identity.firtsName} {identity.lastName}, i live in {identity.country} and i work as a {identity.ocupation}</p>
+      <p>Hi, my name is {identity.firtsName} {identity.lastName}, i live in {identity.country} and i study as a {identity.ocupation}</p>
       {identity.hobys.length >= 2 && 
       <li>Two of my hobies are: {identity.hobys[0]} and {identity.hobys[1]}</li>
       }
     </ul>
     <ul>
       <p>My skills are:</p>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skills">{skill}</li>)}
     </ul>
     {happy && <p>Im happy to be learning Astro!</p> }
     {finished && <p>I finished this tutorial.</p> }
-    {goals === 3 ? <p>My gioal is to finish in 3 days</p> : <p>I not finished my goals in 3 days</p> }
+    {goals === 3 ? <p>My goal is to finish in 3 days</p> : <p>I not finished my goals in 3 days</p> }
+
+    <Footer />
   </body>
 </html>
